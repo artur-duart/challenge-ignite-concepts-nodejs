@@ -1,15 +1,13 @@
-# Desafio 01: Conceitos do Node.js
+# Challenge 01: Concepts of Node.js
 
-Este é o meu repositório para o Desafio 01 da Rocketseat, onde estou testando meus conhecimentos em Node.js e criando uma aplicação para gerenciar tarefas (ou *todos*, em inglês).
+This is my repository for Rocketseat Challenge 01, where I'm testing my knowledge of Node.js and creating an application to manage tasks (*todos*).
 
-## Sobre o desafio
+## About the challenge
 
-Nesta aplicação, eu posso criar um usuário com `name` e `username` e fazer o CRUD de *todos*:
+In this application, I need to be able to create a user with `name` and `username` and CRUD of *todos*:
 
-- Criar um novo *todo*;
-- Listar todos os *todos*;
-- Alterar o `title` e `deadline` de um *todo* existente;
-- Marcar um *todo* como feito;
-- Excluir um *todo*;
-
-Tudo isso para cada usuário em específico (o `username` será passado pelo header).
+- Create a new *todo*;
+- List all *todos*;
+- Change the `title` and `deadline` of an existing *todo*;
+- Mark a *todo* as done;
+- Delete a *todo*;
