@@ -20,6 +20,8 @@ function checksExistsUserAccount(request, response, next) {
     });
   }
 
+  request.user = user;
+
   return next();
 }
 
@@ -44,7 +46,8 @@ app.post("/users", (request, response) => {
 });
 
 app.get("/todos", checksExistsUserAccount, (request, response) => {
-  // Complete aqui
+  const { user } = request;
+  return response.json(user.todos);
 });
 
 app.post("/todos", checksExistsUserAccount, (request, response) => {
