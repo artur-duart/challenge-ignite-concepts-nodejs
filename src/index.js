@@ -112,11 +112,17 @@ app.delete("/todos/:id", checksExistsUserAccount, (request, response) => {
   const { user } = request;
   const { id } = request.params;
 
-  const todo = user.todos.findIndex((todo) => todo.id === id);
+  const todoIndex = user.todos.findIndex((todo) => todo.id === id);
 
-  user.todos.splice(todo, 1);
+  if (todoIndex === -1) {
+    return response.status(404).json({
+      error: "Todo not found.",
+    });
+  }
 
-  return response.status(200).send();
+  user.todos.splice(todoIndex, 1);
+
+  return response.status(204).json();
 });
 
 module.exports = app;
